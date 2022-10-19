@@ -78,6 +78,7 @@ const Home = () => {
     try {
       await deleteBank(id)
       toast.success('Bank has been deleted')
+      window.location.reload('/')
     } catch (error) {
       console.log(error)
     }
@@ -124,7 +125,7 @@ const Home = () => {
 
                   {banks?.map((bank,i)=>(
                     <TableRow key={bank._id} hoover>
-                      <TableCell>{bank.vendorname}</TableCell>
+                      <TableCell className="vendorname">{bank.vendorname}</TableCell>
                       <TableCell>{bank.accno}</TableCell>
                       <TableCell>{bank.bankname}</TableCell>
                       <TableCell>
@@ -144,8 +145,7 @@ const Home = () => {
               </Table> 
             </TableContainer>
               <TablePagination
-                component="div" 
-                // className='pagination' 
+                component="div"
                 count={count} 
                 page={page}
                 rowperPage = {parseInt(rowperPage)}

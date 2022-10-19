@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Nunito', sans-serif;
+  margin: 0 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 html {
  
 }
@@ -27,14 +36,6 @@ html {
   background: rgb(41, 41, 41);
   transition: 0.3s ease-in-out;
   color: #fff;
-}
-body{
-  font-family: 'Mulish', sans-serif;
-  margin: 0 10%;
-  width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 
@@ -170,6 +171,13 @@ form input{
   margin-left: 400px;
   margin-top: 20px;
   /* align-self: center; */
+}
+
+.vendorname{
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #6e6c6c !important;
+  cursor: pointer !important;
 }
 @media (max-width : 768px){
   .contact-wrapper{
